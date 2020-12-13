@@ -2,17 +2,14 @@ body{
     margin: 0;
 }
 a{
-        border: 4px dotted green;
-        font-weight: 900;
+     font-weight: 700;
     text-decoration: none;
     color: rgb(0, 0, 0);
+    border: 4px dotted green;
     }
 li{
-    min-width: 400px;
-    line-height: 40px;
-    font-size: 1em;
-
-    
+    min-width: 100px;
+    line-height: 40px;  
    
 
 }
@@ -35,9 +32,10 @@ h3{
 .cat1{
     list-style: none;
     text-align: center;
+    font-size: 25px;
 }
 .cat1a{
-    
+    text-align: start;
 
 }
 
