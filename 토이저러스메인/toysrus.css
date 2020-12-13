@@ -8,7 +8,7 @@ a{
     color: rgb(0, 0, 0);
     }
 li{
-    width: auto;
+    min-width: 600px;
     line-height: 50px;
     font-size: 1.5em;
 
@@ -40,14 +40,7 @@ h3{
     
 
 }
-.cat2{
-    list-style: none;
-    text-align: center;
-}
-.cat2a{
-   
 
-}
 .container {
     display: inline-block;
     
