@@ -1,0 +1,45 @@
+body{
+    margin: 0;
+}
+a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+li{
+    
+    line-height: 50px;
+    list-style: none;
+
+}
+img{
+    max-width: 150px;
+    height:auto;
+    padding: 5px 10px;
+}
+h3{
+    text-align: center;
+}
+.navbar{
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    background-color: #3019b6;
+    padding: 8px 12px;
+    
+}
+.cat1{
+    border: 1px solid black;
+
+}
+.cat1a{
+    
+
+}
+.cat2{
+    border: 1px solid black;
+
+}
+.cat2a{
+   
+
+}
