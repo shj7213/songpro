@@ -2,6 +2,8 @@
 #im {text-align:center;}
 .b1 {text-align:center;}
 img {
+  img {
   max-width: 100%;
-  height: auto;
+  height: auto !important;
 }
+
