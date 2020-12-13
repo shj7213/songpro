@@ -9,10 +9,12 @@ a{
     }
 li{
     min-width: 100px;
-    line-height: 40px;  
-   
-
+    line-height: 40px; 
+    list-style: none;
+    text-align: center;
+    font-size: 25px;
 }
+   
 img{
     max-width: 150px;
     height:auto;
@@ -35,6 +37,7 @@ h3{
     font-size: 25px;
 }
 .cat1a{
+    list-style: none;
     text-align: start;
     font-size: 16px;
 }
