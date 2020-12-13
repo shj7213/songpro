@@ -2,6 +2,7 @@ body{
     margin: 0;
 }
 a{
+    border: 1px solid black;
     text-decoration: none;
     color: rgb(0, 0, 0);
 }
@@ -9,6 +10,7 @@ li{
     
     line-height: 50px;
     list-style: none;
+    font-size: 2em;
 
 }
 img{
@@ -28,15 +30,14 @@ h3{
     
 }
 .cat1{
-    border: 1px solid black;
-
+   
 }
 .cat1a{
     
 
 }
 .cat2{
-    border: 1px solid black;
+   
 
 }
 .cat2a{
