@@ -8,13 +8,13 @@ a{
         font-weight: 900;
     text-decoration: none;
     color: rgb(0, 0, 0);
-    width: 120px;
+
     
 }
 li{
     
-    line-height: 60px;
-    
+    line-height: 50px;
+
     
    
 
@@ -39,7 +39,7 @@ h3{
     list-style: none;
 }
 .cat1a{
-    font-size: 12px;
+    
 
 }
 .cat2{
@@ -47,7 +47,7 @@ h3{
 
 }
 .cat2a{
-    font-size: 12px;
+   
 
 }
 .container {
