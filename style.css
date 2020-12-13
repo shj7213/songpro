@@ -3,7 +3,7 @@
 .b1 {text-align:center;}
 img {
   img {
-  max-width:200%;
-  height: 200%;
+  width: 100%;
+  height: auto;
 }
 
