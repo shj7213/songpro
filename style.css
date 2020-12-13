@@ -2,8 +2,8 @@
 #im {text-align:center;}
 .b1 {text-align:center;}
   img {
- min-width: 100%;
- min-height: 100%;
+ min-width: 200%;
+ min-height: auto;
 
 }
 
