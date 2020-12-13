@@ -2,7 +2,8 @@
 #im {text-align:center;}
 .b1 {text-align:center;}
   img {
- max-width: 100%;
+  width:inherit;   
+  max-width: 100%;
   height: auto;
 
 }
