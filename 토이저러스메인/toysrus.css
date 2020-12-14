@@ -23,14 +23,6 @@ img{
 h3{
     text-align: center;
 }
-.navbar{
-    display: flex;
-    justify-content:flex-start;
-    align-items: center;
-    background-color: #f8c3c3ce;
-    padding: 3px 2px;
-    
-}
 .cat1{
     list-style: none;
     text-align: center;
