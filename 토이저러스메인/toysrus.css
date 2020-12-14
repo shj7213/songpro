@@ -4,7 +4,7 @@ body{
 a{
      font-weight: 700;
      font-size: 1.5em;
-    color: rgb(197, 36, 36);
+    color: rgb(91, 2, 255);
     }
 li{
     min-width: 100px;
@@ -64,7 +64,7 @@ h3{
   }
   
   td {
-      height:60px;
+    height: 50px;
     text-align: left;
     padding: 24px;
   }
