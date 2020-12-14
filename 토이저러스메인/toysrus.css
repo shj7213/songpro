@@ -52,7 +52,7 @@ h3{
   body {
     font-family: 'Lato', sans-serif;
     color: #333;
-    font-weight: 400;
+    font-weight: 700;
     font-size: 16px;
   }
   
@@ -62,7 +62,7 @@ h3{
   }
   
   caption {
-    font-size: 18px;
+    font-size: 1.2em;
     font-weight: 400;
     padding: 12px 0;
   }
@@ -77,11 +77,15 @@ h3{
   
   tr:nth-child(2n) { background: #e0e0e0; }
   
-  th, td {
-    text-align: left;
+  th {
+    text-align: center;
     padding: 24px;
   }
   
+  td {
+    text-align: left;
+    padding: 24px;
+  }
   tfoot tr { background: none; }
   
   tfoot td {
