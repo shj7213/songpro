@@ -3,9 +3,8 @@ body{
 }
 a{
      font-weight: 700;
-    text-decoration: none;
-    color: rgb(0, 0, 0);
-    border: 4px dotted green;
+     font-size: 1.5em;
+    color: rgb(197, 36, 36);
     }
 li{
     min-width: 100px;
@@ -23,24 +22,6 @@ img{
 h3{
     text-align: center;
 }
-.cat1{
-    list-style: none;
-    text-align: center;
-    font-size: 25px;
-}
-.cat1a{
-    list-style: none;
-    text-align: start;
-    font-size: 16px;
-}
-
-.container {
-    display: inline-block;
-    
-}
-
-.right {
-    float: center;
 
 }
 *, *:before, *:after {
