@@ -22,7 +22,38 @@ img{
 h3{
     text-align: center;
 }
+div
+{
+ font-size: 1.5em;
+}
 
+.parent{
+  width: 90%;
+  margin: 10px auto;
+  display: flex;
+}
+
+.first {
+  border: 1px solid red;
+  flex:1;
+  width:30%;
+  box-sizing: border-box;
+}
+
+.second{
+  border: 1px solid green;
+  flex:1;
+  margin: 0px 5%;
+  width:30%;
+  box-sizing: border-box;
+}
+
+.third{
+  border: 1px solid blue;
+  flex:1;
+  width:30%;
+  box-sizing: border-box;
+}
 }
 *, *:before, *:after {
     -moz-box-sizing: border-box;
