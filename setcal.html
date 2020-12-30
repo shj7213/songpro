@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html class="songpro-set" lang="kr">
+    <meta charset="UTF-8"/>
+    <head>
+        <style>
+            body{text-align: center;}
+            div{margin-bottom 4px; font-size: 20px;}
+    input{display: block; margin: auto; margin-top: 5px; height: 40px; width: 300px;}
+    button{width:80px; height:40px; margin-bottom: 20px; margin-top: 20px;}
+        </style>
+        <h3>롯데마트 진장점 세트계산기</h3>
+    <div>판매 가격</div>
+<input type="text" id="oPrice" autofocus>
+<br>
+<div>카드/L-point 할인율</div>
+<input type="text"  id="rate">
+<br>
+<div>구매수량</div>
+<input type="text"  id="count">
+<br>
+<div>덤수량</div>
+<input type="text"  id="count2">
+<br>
+<br>
+<button onclick="ShowPrice()">계산</button>
+<div id="showResult"></div>
+<p>계산된 가격과 영수증 상의 가격이 정확하게 일치하지 않을 수 있습니다.</p>
+
+<script>
+function ShowPrice(){
+    var originPrice = document.querySelector("#oPrice").value;
+    var count = document.querySelector("#count").value;
+    var rate = document.querySelector("#rate").value;
+    var count2 = document.querySelector("#count2").value;
+    var savePrice = originPrice *(rate / 100);
+    var resultPrice = originPrice - savePrice;
+    
+  
+  document.querySelector("#showResult").innerHTML = "상품의 원래 가격은 " +originPrice+"원이고, 할인율은 " +rate+
+  "%입니다. "+savePrice+"원을 절약한" +resultPrice+ "원에 살 수 있습니다";
+  
+  }
+</script>
+</head>
+
+</html>
