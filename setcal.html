@@ -4,8 +4,8 @@
     <head>
         <style>
             body{text-align: center;}
-            div{margin-bottom 4px; font-size: 16px;}
-    input{display: block; margin: auto; margin-top: 5px; height: 40px; width: 300px;}
+            div{margin-bottom 4px; font-size: 20px;}
+    input{display: block; margin: auto; font-size: 25px; margin-top: 5px; height: 60px; width: 90%;}
     button{width:80px; height:40px; margin-bottom: 20px; margin-top: 20px;}
         </style>
         <h3>롯데마트 진장점 세트계산기</h3>
@@ -36,7 +36,7 @@ function ShowPrice(){
     
   
   document.querySelector("#showResult").innerHTML = "상품의 원래 가격은 " +(originPrice * count)+"원 입니다.<br> 증정은" +(count2)+ "개 할인율은 " +rate+
-  "%입니다.<br>" +((savePrice * (count-count2)) + savePrice2) +" 원을 절약한 " +resultPrice+ "원에 살 수 있습니다";
+  "%입니다.<br>" +((savePrice * (count-count2)) + savePrice2) +" 원을 할인된 " +resultPrice+ "원에 살 수 있습니다<br> 단가는 "+(resultPrice/count)+" 입니다. ";
   
   }
 </script>
