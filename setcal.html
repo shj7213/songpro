@@ -6,7 +6,7 @@
             body{text-align: center;}
             div{margin-bottom 4px; font-size: 2em;}
     input{display: block; margin: auto; font-size: 3em; margin-top: 5px; height: 120px; width: 90%; border-width: 3px;}
-    button{width:80px; height:40px; margin-bottom: 20px; margin-top: 20px; color: blueviolet;}
+    button{width:50%; height:80px; font-size: 2em; margin-bottom: 20px; margin-top: 20px; color: blueviolet;}
         </style>
         <h1>롯데마트 진장점 세트계산기</h1>
         <p>사전예약 1차 12/24(목) ~ 1/17(일)</p>
@@ -23,7 +23,7 @@
 <br>
 <div>덤수량-N+1, 지원물량 입력</div>
 <input type="text"  id="count2">
-<button onclick="ShowPrice()">계산</button>
+<button onclick="ShowPrice()"   >계산</button>
 <div id="showResult"></div>
 <p>계산값과 실제 계산과 다소 차이가 있을 수 있으니<br> 참조용으로 사용 바랍니다.</p>
 
@@ -36,10 +36,10 @@ function ShowPrice(){
     var savePrice = originPrice *(rate / 100);
     var savePrice2 = (originPrice * count2);
     var resultPrice = ((originPrice - savePrice) * (count - count2));
-    var price = (resultPrice/count)
-  
+    var price = (resultPrice/count)    
+}
   document.querySelector("#showResult").innerHTML = "상품의 원래 가격은 " +(originPrice * count)+"원 입니다.<br> 증정은" +(count2)+ "개 할인율은 " +rate+
-  "%입니다.<br>" +((savePrice * (count-count2)) + savePrice2) +" 원이 할인된 " +resultPrice+ "원에 구매하실 수 있습니다.<br> 단가는 "+(price)+" 입니다. ";
+  "%입니다.<br>" +((savePrice * (count-count2)) + savePrice2)+"원이 할인된 " +resultPrice+ "원에 구매하실 수 있습니다.<br> 단가는 "+(price)+" 입니다. ";
   
   }
 </script>
