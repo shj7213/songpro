@@ -5,20 +5,23 @@
         <style>
             body{text-align: center;}
             div{margin-bottom 4px; font-size: 2em;}
-    input{display: block; margin: auto; font-size: 3em; margin-top: 5px; height: 3.2em; width: 90%; border-width: 3px;}
+    input{display: block; margin: auto; font-size: 3em; margin-top: 5px; height: 120px; width: 90%; border-width: 3px;}
     button{width:80px; height:40px; margin-bottom: 20px; margin-top: 20px; color: blueviolet;}
         </style>
         <h1>롯데마트 진장점 세트계산기</h1>
+        <p>사전예약 1차 12/24(목) ~ 1/17(일)</p>
+        <p>해당카드:롯데,비씨,KB국민,신한,HN,현대,삼성,하나,우리,씨티,광주은행,전북은행 (12개)</p>
+        <p>상품권증정:30만원이상 3만원, 50~100만원 5만원, 100~1,000만원-100만원 당 13만원, 1,000만원 이상 150만원</p>
     <div>판매 가격</div>
 <input type="text" id="oPrice" autofocus>
 <br>
-<div>카드/L-point 할인율</div>
+<div>카드/L-point/신가 할인율</div>
 <input type="text"  id="rate">
 <br>
-<div>구매수량</div>
+<div>구매수량-전체수량 입력</div>
 <input type="text"  id="count">
 <br>
-<div>덤수량</div>
+<div>덤수량-N+1, 지원물량 입력</div>
 <input type="text"  id="count2">
 <button onclick="ShowPrice()">계산</button>
 <div id="showResult"></div>
@@ -29,14 +32,14 @@ function ShowPrice(){
     var originPrice = document.querySelector("#oPrice").value;
     var count = document.querySelector("#count").value;
     var rate = document.querySelector("#rate").value;
-    var count2 = document.querySelector("#count2").value;
+    var count2 = document.querySelector("#count2").value;   
     var savePrice = originPrice *(rate / 100);
     var savePrice2 = (originPrice * count2);
     var resultPrice = ((originPrice - savePrice) * (count - count2));
-    
+    var price = (resultPrice/count)
   
   document.querySelector("#showResult").innerHTML = "상품의 원래 가격은 " +(originPrice * count)+"원 입니다.<br> 증정은" +(count2)+ "개 할인율은 " +rate+
-  "%입니다.<br>" +((savePrice * (count-count2)) + savePrice2) +" 원이 할인된 " +resultPrice+ "원에 구매하실 수 있습니다.<br> 단가는 "+(resultPrice/count)+" 입니다. ";
+  "%입니다.<br>" +((savePrice * (count-count2)) + savePrice2) +" 원이 할인된 " +resultPrice+ "원에 구매하실 수 있습니다.<br> 단가는 "+(price)+" 입니다. ";
   
   }
 </script>
