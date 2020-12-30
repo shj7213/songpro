@@ -4,7 +4,7 @@
     <head>
         <style>
             body{text-align: center;}
-            div{margin-bottom 4px; font-size: 20px;}
+            div{margin-bottom 4px; font-size: 16px;}
     input{display: block; margin: auto; margin-top: 5px; height: 40px; width: 300px;}
     button{width:80px; height:40px; margin-bottom: 20px; margin-top: 20px;}
         </style>
@@ -20,11 +20,9 @@
 <br>
 <div>덤수량</div>
 <input type="text"  id="count2">
-<br>
-<br>
 <button onclick="ShowPrice()">계산</button>
 <div id="showResult"></div>
-<p>계산된 가격과 영수증 상의 가격이 정확하게 일치하지 않을 수 있습니다.</p>
+<p>계산값과 실제 계산과 다소 차이가 있을 수 있으니<br> 참조용으로 사용 바랍니다.</p>
 
 <script>
 function ShowPrice(){
@@ -33,11 +31,12 @@ function ShowPrice(){
     var rate = document.querySelector("#rate").value;
     var count2 = document.querySelector("#count2").value;
     var savePrice = originPrice *(rate / 100);
-    var resultPrice = originPrice - savePrice;
+    var savePrice2 = (originPrice * count2);
+    var resultPrice = ((originPrice - savePrice) * (count - count2));
     
   
-  document.querySelector("#showResult").innerHTML = "상품의 원래 가격은 " +originPrice+"원이고, 할인율은 " +rate+
-  "%입니다. "+savePrice+"원을 절약한" +resultPrice+ "원에 살 수 있습니다";
+  document.querySelector("#showResult").innerHTML = "상품의 원래 가격은 " +(originPrice * count)+"원 입니다.<br> 증정은" +(count2)+ "개 할인율은 " +rate+
+  "%입니다.<br>" +((savePrice * (count-count2)) + savePrice2) +" 원을 절약한 " +resultPrice+ "원에 살 수 있습니다";
   
   }
 </script>
