@@ -7,15 +7,19 @@
             div{margin-bottom 4px; font-size: 2em;}
     input{display: block; margin: auto; font-size: 3em; margin-top: 5px; height: 120px; width: 90%; border-width: 3px;}
     button{width:50%; height:80px; font-size: 2em; margin-bottom: 20px; margin-top: 20px; color: blueviolet;}
+    #id { font-style: italic;}
         </style>
-        <h1>롯데마트 진장점 세트계산기</h1>
-        <p>사전예약 1차 12/24(목) ~ 1/17(일)</p>
+        <h1>롯데마트 진장점 세트계산기 V.21-1</h1>
+             <p>사전예약 1차 12/24(목) ~ 1/17(일)</p>
         <p>해당카드:롯데,비씨,KB국민,신한,HN,현대,삼성,하나,우리,씨티,광주은행,전북은행 (12개)</p>
         <p>상품권증정:30만원이상 3만원, 50~100만원 5만원, 100~1,000만원-100만원 당 13만원, 1,000만원 이상 150만원</p>
-    <div>판매 가격</div>
+    <div>판매 가격-카드할인/L-point 가격을 입력하세요</div>
 <input type="text" id="oPrice" autofocus>
 <br>
-<div>카드/L-point/신가 할인율</div>
+<div>신가 할인액 - 예) 300 (숫자만 입력하세요)</div>
+<input type="text"  id="rate1">
+<br>
+<div>신가 할인율 - 숫자만 입력하세요</div>
 <input type="text"  id="rate">
 <br>
 <div>구매수량-전체수량 입력</div>
@@ -24,25 +28,49 @@
 <div>덤수량-N+1, 지원물량 입력</div>
 <input type="text"  id="count2">
 <button onclick="ShowPrice()"   >계산</button>
-<div id="showResult"></div>
-<p>계산값과 실제 계산과 다소 차이가 있을 수 있으니<br> 참조용으로 사용 바랍니다.</p>
-
+<div id="showResult"><i></i></div>
+<div id="showResult1"></div>
+<p>소수점 제거 및 원단위 미절삭으로<br>계산값과 실제 계산과 다소 차이가 있을 수 있으니<br> 참조용으로 사용 바랍니다.</p>
+<p>세트 계산기의 사용에 따른 책임은 사용자에게 있습니다.</p>
 <script>
-function ShowPrice(){
+function addComma(num) {
+  var regexp = /\B(?=(\d{3})+(?!\d))/g;
+  return num.toString().replace(regexp, ',');
+}
+    function ShowPrice(){
     var originPrice = document.querySelector("#oPrice").value;
     var count = document.querySelector("#count").value;
+    var rate1 = document.querySelector("#rate1").value;
     var rate = document.querySelector("#rate").value;
     var count2 = document.querySelector("#count2").value;   
-    var savePrice = originPrice *(rate / 100);
-    var savePrice2 = (originPrice * count2);
-    var resultPrice = ((originPrice - savePrice) * (count - count2));
+    var savePrice = ((originPrice - rate1) * (rate / 100));
+    var savePrice2 = (originPrice * count2); 
+    var resultPrice = ((originPrice - rate1) - savePrice) * (count - count2);   
     var price = (resultPrice/count)    
-
-  document.querySelector("#showResult").innerHTML = "상품의 원래 가격은 " +(originPrice * count)+"원 입니다.<br> 증정은" +(count2)+ "개 할인율은 " +rate+
-  "%입니다.<br>" +((savePrice * (count-count2)) + savePrice2)+"원이 할인된 " +resultPrice+ "원에 구매하실 수 있습니다.<br> 단가는 "+(price)+" 입니다. ";
+    let ans = resultPrice;
+        if(ans < 300000){
+            document.querySelector("#showResult1").innerHTML =("상품권 대상이 아닙니다.");
+    }else if(ans >= 300000 && ans < 500000){
+        document.querySelector("#showResult1").innerHTML =("상품권 3만원/ *제외 상품인지 확인*");
+    }else if(ans >= 500000 && ans < 1000000){
+        document.querySelector("#showResult1").innerHTML =("상품권 5만원/ *제외 상품인지 확인*");
+    }else if(ans >= 1000000 && ans < 10000000){
+        document.querySelector("#showResult1").innerHTML =("100만원 당 13만원/ *제외 상품인지 확인*");
+    }else if(ans >= 10000000){
+        document.querySelector("#showResult1").innerHTML =("100만원 당 15만원/ *제외 상품인지 확인*");      
+    }
+     else{
+        document.querySelector("#showResult1").innerHTML =("상품권 대상이 아닙니다.");
+    }
+    
+    document.querySelector("#showResult").innerHTML = "상품의 원래 가격은 " +addComma(Math.round((originPrice * count)))+"원 입니다.<br>"+addComma(Math.round(((originPrice * (count-count2)) - resultPrice)))+ "원이 할인 <br> 증정 수량은" 
+  +(count2)+ "개 입니다.<br> 결재금액은" +addComma(Math.round(resultPrice))+ "원 이며, <br> 개당 가격은 "+addComma(Math.round(price))+" 입니다.";
   
-  }
+}
+ 
+ 
 </script>
+
 </head>
 
 </html>
