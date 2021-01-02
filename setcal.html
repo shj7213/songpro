@@ -10,29 +10,30 @@
     button{width:50%; height:80px; font-size: 2em; margin-bottom: 20px; margin-top: 20px; color: blueviolet;}
     #id { font-style: italic;}
         </style>
-        <h1>롯데마트 진장점 세트계산기 V.21-1</h1>
-             <p>사전예약 1차 12/24(목) ~ 1/17(일)</p>
+        <h1>☆롯데마트 진장점 세트계산기 V.21-1☆</h1>
+             <p>사전예약 1차 : 12/24(목) ~ 1/17(일)</p>
         <p>해당카드:롯데,비씨,KB국민,신한,HN,현대,삼성,하나,우리,씨티,광주은행,전북은행 (12개)</p>
         <p>상품권증정:30만원이상 3만원, 50~100만원 5만원, 100~1,000만원-100만원 당 13만원, 1,000만원 이상 150만원</p>
-    <div>정상가 입력-할인전 가격입력</div>
+    <div>①정상가 입력-할인전 가격입력</div>
 <input type="text" id="oPrice" autofocus>
 <br>
-<div>할인액-개당 추가할인 금액입력</div>
+<div>②할인액-개당 추가할인 금액입력</div>
 <input type="text"  id="rate">
 <br>
-<div>카드할인율/L-point회원 할인율을 입력하세요</div>
+<div>③카드할인율/L-point회원 할인율을 입력하세요</div>
 <input type="text" id="oPrice1">
 <br>
-<div>구매수량-덤포함 전체수량 입력</div>
+<div>④구매수량-덤포함 전체수량 입력</div>
 <input type="text"  id="count">
 <br>
-<div>N+1(증정)+추가증정 수량입력</div>
+<div>⑤N+1(증정)+추가증정 수량입력</div>
 <input type="text"  id="count2">
 <button onclick="ShowPrice()"   >계산</button>
 <div id="showResult"><i></i></div>
 <div id="showResult1"></div>
 <p>소수점 제거 및 원단위 절삭으로<br>계산값과 실제 계산과 다소 차이가 있을 수 있으니<br> 참조용으로 사용 바랍니다.</p>
 <p>★세트 계산기의 사용에 따른 책임은 사용자에게 있습니다.★</p>
+<p>개선사항이나 문의사항은 shj7213@gmail.com 으로 메일 주십시오!</p>
 <script>
 function addComma(num) {
   var regexp = /\B(?=(\d{3})+(?!\d))/g;
