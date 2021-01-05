@@ -54,19 +54,21 @@ function addComma(num) {
     var count = document.querySelector("#count").value; //전체구매수량
     var count1 = document.querySelector("#count1").value; //N값
     var count2 = document.querySelector("#count2").value; //추가증정
-    var nn1 = (count1 *1 + 1); // 1/n 값
+    var nno = ((count1*1) == 0) || ((count1*1) == "") ? -1 : (count1*1) ;
+    var nn1 = (nno + 1); // 1/n 값
     var result;
-    result = parseInt(((count*1)-(count2*1)) / nn1); // n+1한 값
+    result = parseInt(((count*1)-(count2*1)) / (nn1*1)); // n+1한 값
     var remainder;
     remainder = ((count*1)-(count2*1)) % nn1; // n+1하고 남은값
-    var gift = ((result*1) + (count2*1)) //증정수량
-    var nn2 = ((count*1) - (gift*1)) //결재수량
+    var nnn = (nn1 == 0 ) ? 0 : (result*1) ;
+    var gift = (nnn + (count2*1)) //증정수량
+    var nn2 = ((count*1) - gift) //결재수량
     var savePrice = ((((originPrice*1) - (rate*1))*((100-(rate1*1))/100)) * ((100-(oPrice1*1)) / 100)); //할인후 단가
     var savePrice0 = (savePrice * nn2 ); // 결재금액
-    var savePrice2 = (originPrice * (gift + count2)); 
+    var savePrice2 = (originPrice * (gift + (count2*1))); 
     var savePrice1 = (originPrice * (rate1/100));
     var resultPrice = (savePrice * nn2);   //최종결재금액
-    var price = (resultPrice/count) //정상가 
+    var price = (resultPrice/(count*1)) //정상가 
     let ans = resultPrice;
         if(ans < 300000){
             document.querySelector("#showResult1").innerHTML =("상품권 대상이 아닙니다.");
