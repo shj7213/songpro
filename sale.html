@@ -6,6 +6,8 @@
 <script src="http://code.jquery.com/jquery-3.1.0.min.js"></script>
 <script>
  
+ 
+
 function calc(val){
     var origin = parseInt(val);
     var interest = origin*(50/100);
@@ -34,6 +36,8 @@ function calc(val){
     }
 
 }
+
+
 </script>
 <style>
     body{text-align: center;}
@@ -47,6 +51,6 @@ input{display: block; margin: auto; font-size: 3em; margin-top: 5px; height: 90p
     <div>50%할인 금액:  <input type="text" id="result" disabled/></div>
     <div>45%할인 금액:  <input type="text" id="result2" disabled/></div>
     <div>40%할인 금액:  <input type="text" id="result3" disabled/></div>
-    <div>정상가 : <input type="text" id="origin" onkeyup="calc(this.value)"/></div>
+    <div>정상가 : <input type="number" name='userPhoneNumber' pattern='\d*' id="origin" onkeyup="calc(this.value)"/></div>
 </body>
 </html>
