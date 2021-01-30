@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>할인액 계산기</title>
+<script src="http://code.jquery.com/jquery-3.1.0.min.js"></script>
+<script>
+ 
+function calc(val){
+    var origin = parseInt(val);
+    var interest = origin*(50/100);
+    
+    if(val == ""){
+        document.getElementById('result').value = "0";
+    }else{
+        document.getElementById('result').value = interest;
+    }
+    var origin = parseInt(val);
+    var interest = origin-origin*(30/100);
+    
+    if(val == ""){
+        document.getElementById('result2').value = "0";
+    }else{
+        document.getElementById('result2').value = interest;
+    }
+
+    var origin = parseInt(val);
+    var interest = origin-origin*(20/100);
+    
+    if(val == ""){
+        document.getElementById('result3').value = "0";
+    }else{
+        document.getElementById('result3').value = interest;
+    }
+
+    var origin = parseInt(val);
+    var interest = origin-origin*(15/100);
+    
+    if(val == ""){
+        document.getElementById('result4').value = "0";
+    }else{
+        document.getElementById('result4').value = interest;
+    }
+
+    var origin = parseInt(val);
+    var interest = origin-origin*(10/100);
+    
+    if(val == ""){
+        document.getElementById('result5').value = "0";
+    }else{
+        document.getElementById('result5').value = interest;
+    }
+    var origin = parseInt(val);
+    var interest = origin-origin*(5/100);
+    
+    if(val == ""){
+        document.getElementById('result6').value = "0";
+    }else{
+        document.getElementById('result6').value = interest;
+    }
+}
+</script>
+<style>
+    body{text-align: center;}
+    div{margin-bottom 4px; font-size: 2em;}
+input{display: block; margin: auto; font-size: 3em; margin-top: 5px; height: 90px; width: 80%; border-width: 3px;}
+#id { font-style: italic;}
+</style>
+</head>
+<body>
+    <h2>정율할인 계산기 입니다.<br>정상가 입력하시면 자동 계산됩니다.</h2>
+    <div>50%할인 금액:  <input type="text" id="result" disabled/></div>
+    <div>30%할인 금액:  <input type="text" id="result2" disabled/></div>
+    <div>20%할인 금액:  <input type="text" id="result3" disabled/></div>
+    <div>15%할인 금액:  <input type="text" id="result4" disabled/></div>
+    <div>10%할인 금액:  <input type="text" id="result5" disabled/></div>
+    <div> 5%할인 금액 :  <input type="text" id="result6" disabled/></div>
+    <div>정상가 : <input type="text" id="origin" onkeyup="calc(this.value)"/></div>
+</body>
+</html>
