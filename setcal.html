@@ -20,25 +20,25 @@
 <p>2차 상품권증정:30만원이상 3만원, 50~100만원 5만원, 100~1,000만원-100만원 당 10만원, 1,000만원 이상 100만원</p>
 <p>3차 상품권증정:30만원이상 1만5천원, 50~100만원 2만5천원, 100~1,000만원-100만원 당 5만원, 1,000만원 이상 50만원</p>
     <div>①정상가 입력-할인전 가격입력</div>
-<input type="text" onKeyup="this.value=this.value.replace(/[^0-9]/g,'');" id="oPrice" autofocus>
+<input type="number" name='userPhoneNumber' pattern='\d*' onKeyup="this.value=this.value.replace(/[^0-9]/g,'');" id="oPrice" autofocus>
 <br>
 <div>②할인액-개당 추가할인 금액</div>
-<input type="text" onKeyup="this.value=this.value.replace(/[^0-9]/g,'');" id="rate">
+<input type="number" name='userPhoneNumber' pattern='\d*' onKeyup="this.value=this.value.replace(/[^0-9]/g,'');" id="rate">
 <br>
 <div>③할인율-개당 추가할인율 입력</div>
-<input type="text" onKeyup="this.value=this.value.replace(/[^0-9]/g,'');" id="rate1">
+<input type="number" name='userPhoneNumber' pattern='\d*' onKeyup="this.value=this.value.replace(/[^0-9]/g,'');" id="rate1">
 <br>
 <div>④카드/L-point회원 할인율을 입력하세요</div>
-<input type="text" onKeyup="this.value=this.value.replace(/[^0-9]/g,'');" id="oPrice1">
+<input type="number" name='userPhoneNumber' pattern='\d*' onKeyup="this.value=this.value.replace(/[^0-9]/g,'');" id="oPrice1">
 <br>
 <div>⑤고객이 가져가는 모든수량</div>
-<input type="text" onKeyup="this.value=this.value.replace(/[^0-9]/g,'');" id="count">
+<input type="number" name='userPhoneNumber' pattern='\d*' onKeyup="this.value=this.value.replace(/[^0-9]/g,'');" id="count">
 <br>
 <div>⑥N+1(증정)-N값만 입력</div>
-<input type="text" onKeyup="this.value=this.value.replace(/[^0-9]/g,'');" id="count1">
+<input type="number" name='userPhoneNumber' pattern='\d*' onKeyup="this.value=this.value.replace(/[^0-9]/g,'');" id="count1">
 <br>
 <div>⑦추가증정 수량입력</div>
-<input type="text" onKeyup="this.value=this.value.replace(/[^0-9]/g,'');" id="count2">
+<input type="number" name='userPhoneNumber' pattern='\d*' onKeyup="this.value=this.value.replace(/[^0-9]/g,'');" id="count2">
 <button onclick="ShowPrice()"   >계산</button>
 <div id="showResult"></div>
 <div id="showResult1"></div>
