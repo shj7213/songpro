@@ -75,18 +75,18 @@ function addComma(num) {
     var price = (resultPrice/(count*1)) //정상가 
     let ans = resultPrice;
         if(ans < 300000){
-            document.querySelector("#showResult1").innerHTML =("상품권 대상이 아닙니다.");
+            document.querySelector("#showResult1").innerHTML =("사전예약기간이 종료 되었습니다.");
     }else if(ans >= 300000 && ans < 500000){
-        document.querySelector("#showResult1").innerHTML =("상품권 1만5천원/ *제외 상품인지 확인*");
+        document.querySelector("#showResult1").innerHTML =("사전예약기간이 종료 되었습니다.");
     }else if(ans >= 500000 && ans < 1000000){
-        document.querySelector("#showResult1").innerHTML =("상품권 2만5천원/ *제외 상품인지 확인*");
+        document.querySelector("#showResult1").innerHTML =("사전예약기간이 종료 되었습니다.");
     }else if(ans >= 1000000 && ans < 10000000){
-        document.querySelector("#showResult1").innerHTML =("100만원 당 5만원/ *제외 상품인지 확인*");
+        document.querySelector("#showResult1").innerHTML =("사전예약기간이 종료 되었습니다.");
     }else if(ans >= 10000000){
-        document.querySelector("#showResult1").innerHTML =("상품권 50만원/ *제외 상품인지 확인*");      
+        document.querySelector("#showResult1").innerHTML =("사전예약기간이 종료 되었습니다.");      
     }
      else{
-        document.querySelector("#showResult1").innerHTML =("상품권 대상이 아닙니다.");
+        document.querySelector("#showResult1").innerHTML =("사전예약기간이 종료 되었습니다.");
     }
     
     document.querySelector("#showResult").innerHTML = "상품의 원래 가격은 " +addComma(Math.round((originPrice * count)))+"원 입니다.<br>"
