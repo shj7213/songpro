@@ -1,0 +1,7 @@
+h3 {background-color: green;
+
+}
+a { text-decoration: none;
+    color: rgb(54, 54, 56);
+    font-weight: 700;}
+a:hover { text-decoration: underline; }
