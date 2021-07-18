@@ -1,2 +1,8 @@
-.banner_wraper { height: 640px; width: 480px; position: absolute; overflow: hidden; }
-.banner_wraper img { height: 640px; position: absolute; }
+li {
+    list-style: none;
+}
+
+img {
+    height: 400px;
+    width: auto;
+}
