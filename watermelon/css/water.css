@@ -1,8 +1,21 @@
-li {
+ul > li {
     list-style: none;
+    flex: 1 1 40%;
+    text-align: center;
+    font-size: 1.5em;
 }
 
-img {
-    height: 400px;
-    width: auto;
+div > ul{
+   
+    display: flex; 
+    flex-wrap: wrap;
 }
+
+li > img {
+    height: auto;
+    width: 90%;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    
+}
+
