@@ -1,0 +1,9 @@
+html {
+    background-color: bisque;
+}
+img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 30px;
+    border-radius: 20px;
+}
