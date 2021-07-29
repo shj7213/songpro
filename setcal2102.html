@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html class="songpro-set" lang="kr">
+    <meta charset="UTF-8"/>
+    <title>롯데마트 21년 추석 세트계산기V21.02</title>
+    <head>
+        <style>
+            body{text-align: center;}
+            div{margin-bottom 4px; font-size: 2em;}
+    input{display: block; margin: auto; font-size: 3em; margin-top: 5px; height: 90px; width: 80%; border-width: 3px;}
+    button{width:50%; height:80px; font-size: 2em; margin-bottom: 20px; margin-top: 20px; color: blueviolet;}
+    #id { font-style: italic;}
+        </style>
+        <h1>☆롯데마트 세트계산기 V.2102☆</h1>
+        <h2>①~⑦까지 순서대로 넣으시고 계산버튼을 누르시면 됩니다.<br> 내용이 없으면 비워 두십시오.</h2>
+             <p>사전예약 1차 : 7/29(목) ~ 8/25(수)</p>
+	     <!--  <p>사전예약 2차 : 8/26(목) ~ 9/01(수))</p>
+        <p>사전예약 3차 : 9/2(목) ~ 9/8(수)</p>-->
+        <p>해당카드:롯데,비씨,KB국민,신한,HN,현대,삼성,하나,우리 (9개)</p>
+        <p>1차 상품권증정:30만원이상 3만원, 50~100만원 5만원, 100~1,000만원-100만원 당 13만원, 1,000만원 이상 150만원</p>
+<!--<p>2차 상품권증정:30만원이상 3만원, 50~100만원 5만원, 100~1,000만원-100만원 당 10만원, 1,000만원 이상 100만원</p>
+<p>3차 상품권증정:30만원이상 1만5천원, 50~100만원 2만5천원, 100~1,000만원-100만원 당 5만원, 1,000만원 이상 50만원</p>-->
+	   <!-- <p>기간: 2/2(화) ~ 2/13(토)</p>
+	    <p> 상품권증정:10만원이상 10만원당 5천원, 30만원이상 1만5천원, 50~100만원 2만5천원, 100~1,000만원-100만원 당 5만원, 1,000만원 이상 50만원</p>-->
+<div>①정상가 입력-할인전 가격입력</div>
+<input type="number" name='userPhoneNumber' pattern='\d*' onKeyup="this.value=this.value.replace(/[^0-9]/g,'');" id="oPrice" autofocus>
+<br>
+<div>②고객이 가져가는 모든수량</div>
+<input type="number" name='userPhoneNumber' pattern='\d*' onKeyup="this.value=this.value.replace(/[^0-9]/g,'');" id="count">
+<br>
+<div>③카드/L-point회원 할인율을 입력하세요</div>
+<input type="number" name='userPhoneNumber' pattern='\d*' onKeyup="this.value=this.value.replace(/[^0-9]/g,'');" id="oPrice1">
+<br>
+<div>④N+1(증정)-N값만 입력</div>
+<input type="number" name='userPhoneNumber' pattern='\d*' onKeyup="this.value=this.value.replace(/[^0-9]/g,'');" id="count1">
+<br>
+<div>⑤할인액-개당 추가할인 금액(MD/업체 협의)</div>
+<input type="number" name='userPhoneNumber' pattern='\d*' onKeyup="this.value=this.value.replace(/[^0-9]/g,'');" id="rate">
+<br>
+<div>⑥할인율-개당 추가할인율 입력(MD/업체 협의)</div>
+<input type="number" name='userPhoneNumber' pattern='\d*' onKeyup="this.value=this.value.replace(/[^0-9]/g,'');" id="rate1">
+<br>
+<div>⑦추가증정 수량입력(업체협의)</div>
+<input type="number" name='userPhoneNumber' pattern='\d*' onKeyup="this.value=this.value.replace(/[^0-9]/g,'');" id="count2">
+<button onclick="ShowPrice()"   >계산</button>
+<div id="showResult"></div>
+<div id="showResult1"></div>
+<p>소수점 제거 및 원단위 절삭으로<br>계산값과 실제 계산과 다소 차이가 있을 수 있으니<br> 참조용으로 사용 바랍니다.</p>
+<p>★세트 계산기의 사용에 따른 책임은 사용자에게 있습니다.★</p>
+<p>개선사항이나 문의사항은 shj7213@gmail.com 으로 메일 주십시오!</p>
+<script>
+function addComma(num) {
+  var regexp = /\B(?=(\d{3})+(?!\d))/g;
+  return num.toString().replace(regexp, ',');
+}
+    function ShowPrice(){
+    var originPrice = document.querySelector("#oPrice").value; //원래가격
+    var rate = document.querySelector("#rate").value; //신가격
+    var rate1 = document.querySelector("#rate1").value; //신가율
+    var oPrice1 = document.querySelector("#oPrice1").value; //카드할인
+    var count = document.querySelector("#count").value; //전체구매수량
+    var count1 = document.querySelector("#count1").value; //N값
+    var count2 = document.querySelector("#count2").value; //추가증정
+    var nno = ((count1*1) == 0) || ((count1*1) == "") ? -1 : (count1*1) ;
+    var nn1 = (nno + 1); // 1/n 값
+    var result;
+    result = parseInt(((count*1)-(count2*1)) / (nn1*1)); // n+1한 값
+    var remainder;
+    remainder = ((count*1)-(count2*1)) % nn1; // n+1하고 남은값
+    var nnn = (nn1 == 0 ) ? 0 : (result*1) ;
+    var gift = (nnn + (count2*1)) //증정수량
+    var nn2 = ((count*1) - gift) //결재수량
+    var savePrice = ((((originPrice*1) - (rate*1))*((100-(rate1*1))/100)) * ((100-(oPrice1*1)) / 100)); //할인후 단가
+    var savePrice0 = (savePrice * nn2 ); // 결재금액
+    var savePrice2 = (originPrice * (gift + (count2*1))); 
+    var savePrice1 = (originPrice * (rate1/100));
+    var resultPrice = (savePrice * nn2);   //최종결재금액
+    var price = (resultPrice/(count*1)) //정상가 
+    let ans = resultPrice;
+        if(ans < 300000){
+            document.querySelector("#showResult1").innerHTML =("상품권 증정 대상이 아닙니다.");
+    }else if(ans >= 300000 && ans < 500000){
+        document.querySelector("#showResult1").innerHTML =("3만원 상품권 증정 입니다. 상품권 제외상품 반드시 확인");
+    }else if(ans >= 500000 && ans < 1000000){
+        document.querySelector("#showResult1").innerHTML =("5만원 상품권 증정 입니다. 상품권 제외상품 반드시 확인");
+    }else if(ans >= 1000000 && ans < 10000000){
+        document.querySelector("#showResult1").innerHTML =("100만원당 13만원 상품권 증정 입니다. 상품권 제외상품 반드시 확인");
+    }else if(ans >= 10000000){
+        document.querySelector("#showResult1").innerHTML =("150만원 상품권 증정 입니다. 상품권 제외상품 반드시 확인");      
+    }
+     else{
+        document.querySelector("#showResult1").innerHTML =("상품권 증정 대상이 아닙니다.");
+    }
+    
+    document.querySelector("#showResult").innerHTML = "상품의 원래 가격은 " +addComma(Math.round((originPrice * count)))+"원 입니다.<br>"
+    +addComma(Math.round(originPrice * count - resultPrice))+ "원 할인 되었으며, <br> 증정 수량은" 
+  +gift+ "개 입니다.<br> 결재금액은" +addComma(Math.round(resultPrice))+ "원 이며, <br> 개당 가격은 "+addComma(Math.round(price))+"원 입니다.";
+  
+}
+ 
+ 
+</script>
+
+</head>
+
+</html>
