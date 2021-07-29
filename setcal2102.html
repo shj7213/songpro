@@ -10,6 +10,32 @@
     button{width:50%; height:80px; font-size: 2em; margin-bottom: 20px; margin-top: 20px; color: blueviolet;}
     #id { font-style: italic;}
     .set {color: red;}
+    div .parent {
+        display: inline;
+        font-size: 1.5em;
+    }
+    a {
+        text-decoration: none;
+    }
+    .parent {
+        display: flex;
+    }
+    .first {
+  border: 1px solid red;
+  flex:1;
+  width:30%;
+ font-size: 2em;
+}
+
+.second{
+  border: 1px solid green;
+  flex:1;
+  margin: 0px 5%;
+  width:30%;
+  font-size: 2em;
+}
+
+
         </style>
     </head>
     <body>    
@@ -28,7 +54,7 @@
 <div>①정상가 입력-할인전 가격입력</div>
 <input type="number" name='userPhoneNumber' pattern='\d*' onKeyup="this.value=this.value.replace(/[^0-9]/g,'');" id="oPrice" autofocus>
 <br>
-<div>②고객 필요수량</div>
+<div>②고객이 가져가는 모든수량</div>
 <input type="number" name='userPhoneNumber' pattern='\d*' onKeyup="this.value=this.value.replace(/[^0-9]/g,'');" id="count">
 <br>
 <div>③카드/L-point회원 할인율을 입력하세요</div>
@@ -51,6 +77,12 @@
 <p>소수점 제거 및 원단위 절삭으로<br>계산값과 실제 계산과 다소 차이가 있을 수 있으니<br> 참조용으로 사용 바랍니다.</p>
 <p>★세트 계산기의 사용에 따른 책임은 사용자에게 있습니다.★</p>
 <p>개선사항이나 문의사항은 shj7213@gmail.com 으로 메일 주십시오!</p>
+
+<div class="parent">
+    <div class="first"><a href="https://www.lotteon.com/p/display/inetflyer/inetFlyerInfo?mallNo=4&sstrCd=0000">롯데마트<br> 전단보기</a></div>
+    <div class="second"><a href="https://www.lotteon.com/m/display/main/lottemart?mall_no=4">온라인으로<br> 쇼핑하기</a></div>
+</div>
+
 <script>
 function addComma(num) {
   var regexp = /\B(?=(\d{3})+(?!\d))/g;
