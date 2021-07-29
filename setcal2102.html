@@ -9,9 +9,13 @@
     input{display: block; margin: auto; font-size: 3em; margin-top: 5px; height: 90px; width: 80%; border-width: 3px;}
     button{width:50%; height:80px; font-size: 2em; margin-bottom: 20px; margin-top: 20px; color: blueviolet;}
     #id { font-style: italic;}
+    .set {color: red;}
         </style>
+    </head>
+    <body>    
         <h1>☆롯데마트 세트계산기 V.2102☆</h1>
         <h2>①~⑦까지 순서대로 넣으시고 계산버튼을 누르시면 됩니다.<br> 내용이 없으면 비워 두십시오.</h2>
+        <h3 class="set">⑤~⑦까지는 반드시 협의후 입력하세요.</h3>
              <p>사전예약 1차 : 7/29(목) ~ 8/25(수)</p>
 	     <!--  <p>사전예약 2차 : 8/26(목) ~ 9/01(수))</p>
         <p>사전예약 3차 : 9/2(목) ~ 9/8(수)</p>-->
@@ -33,13 +37,13 @@
 <div>④N+1(증정)-N값만 입력</div>
 <input type="number" name='userPhoneNumber' pattern='\d*' onKeyup="this.value=this.value.replace(/[^0-9]/g,'');" id="count1">
 <br>
-<div>⑤할인액-개당 추가할인 금액(MD/업체 협의)</div>
+<div class="set">⑤할인액-개당 추가할인 금액(MD/업체 협의)</div>
 <input type="number" name='userPhoneNumber' pattern='\d*' onKeyup="this.value=this.value.replace(/[^0-9]/g,'');" id="rate">
 <br>
-<div>⑥할인율-개당 추가할인율 입력(MD/업체 협의)</div>
+<div class="set">⑥할인율-개당 추가할인율 입력(MD/업체 협의)</div>
 <input type="number" name='userPhoneNumber' pattern='\d*' onKeyup="this.value=this.value.replace(/[^0-9]/g,'');" id="rate1">
 <br>
-<div>⑦추가증정 수량입력(업체협의)</div>
+<div class="set">⑦추가증정 수량입력(업체협의)</div>
 <input type="number" name='userPhoneNumber' pattern='\d*' onKeyup="this.value=this.value.replace(/[^0-9]/g,'');" id="count2">
 <button onclick="ShowPrice()"   >계산</button>
 <div id="showResult"></div>
@@ -100,6 +104,6 @@ function addComma(num) {
  
 </script>
 
-</head>
+</body>
 
 </html>
