@@ -10,10 +10,10 @@
     body{text-align: center; background-color: rgb(241, 190, 154);}
     span{display: inline-block; margin-bottom 10px;
 margin: auto; font-size: 1.5em; margin-top: 5px; height: 90px; width: 25%; border-width: 3px; font-weight: 900;}
-input{ font-size: 1.5em; width: 80%; text-align: right;}
+input{ font-size: 2.0em; width: 80%; text-align: right;}
 #id { font-style: italic;}
 div .sale {float: left;}
-div.numbe {display: inline; font-size: 1.5em; margin: 20px; width: 60%; font-weight: 900;}
+div.numbe {display: inline; font-size: 2em; margin: 10px; width: 60%; font-weight: 900;}
 #origin {width: 50%;}
 button { padding: 1em; font-size: 0.8em;}
 </style>
@@ -23,7 +23,7 @@ button { padding: 1em; font-size: 0.8em;}
 </head>
 <body>
     <h2>할인 계산기<br>할인전 라벨의 정상가를 입력하세요.<br>계산전 참조용으로 사용하세요.</h2>
-    <div class="numbe">정상가 : <input type="text" id="origin" onkeyup="calc(this.value)"
+    <div class="numbe">정상가<input type="text" id="origin" onkeyup="calc(this.value)"
       oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" autofocus/>
         <button onClick="window.location.reload()">새로고침</button></div>
     <div class="sale"><span>50%할인 <input type="text" id="result1" disabled/></span>
