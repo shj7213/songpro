@@ -3,61 +3,38 @@
 <head>
 <meta charset="utf-8">
 <title>할인액 계산기</title>
-
-
+<script src="http://code.jquery.com/jquery-3.1.0.min.js"></script>
 
 <style>
     body{text-align: center; background-color: rgb(241, 190, 154);}
     span{display: inline-block; margin-bottom 10px;
-margin: auto; font-size: 1.5em; margin-top: 5px; height: 90px; width: 25%; border-width: 3px; font-weight: 900;}
-input{ font-size: 2.0em; width: 80%; text-align: right;}
+margin: auto; font-size: 1.5em; margin-top: 10px; height: 90px; width: 25%; border-width: 3px; font-weight: 900;}
+input{ font-size: 1.5em; width: 80%; text-align: right;}
 #id { font-style: italic;}
 div .sale {float: left;}
-div.numbe {display: inline; font-size: 2em; margin: 10px; width: 60%; font-weight: 900;}
+div.numbe {display: inline; font-size: 1.5em; margin: 20px; width: 60%; font-weight: 900;}
 #origin {width: 50%;}
-button { padding: 1em; font-size: 0.8em;}
+button { padding: 1em;  }
 </style>
-
-
-
 </head>
 <body>
     <h2>할인 계산기<br>할인전 라벨의 정상가를 입력하세요.<br>계산전 참조용으로 사용하세요.</h2>
-    <div class="numbe">정상가<input type="text" id="origin" onkeyup="calc(this.value)"
-      oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" autofocus/>
+    <div class="numbe">정상가 : <input type="number" name='userPhoneNumber' pattern='\d*' id="origin" onkeyup="calc(this.value)" onKeyup="this.value=this.value.replace(/[^0-9]/g,'');" autofocus/>
         <button onClick="window.location.reload()">새로고침</button></div>
-    <div class="sale"><span>50%할인 <input type="text" id="result1" disabled/></span>
-    <span>45%할인  <input type="text" id="result2" disabled/></span>
-    <span>40%할인  <input type="text" id="result3" disabled/></span>
-    <span>35%할인  <input type="text" id="result4" disabled/></span>
-    <span>30%할인  <input type="text" id="result5" disabled/></span>
-    <span>25%할인  <input type="text" id="result6" disabled/></span>
-    <span>20%할인  <input type="text" id="result7" disabled/></span>
-    <span>15%할인  <input type="text" id="result8" disabled/></span>
-    <span>10%할인  <input type="text" id="result9" disabled/></span></div>
-
-    <!--<div class="row">
-        <button id="num-1">1</button>
-        <button id="num-2">2</button>
-        <button id="num-3">3</button>
-        <button id="num-4">4</button>
-        <button id="num-5">5</button>
-      </div>
-      <div class="row">
-          <button id="num-6">6</button>
-          <button id="num-7">7</button>
-          <button id="num-8">8</button>
-          <button id="num-9">9</button>
-          <button id="num-0">0</button>
-      </div>!-->
+    <div class="sale"><span><img src="50.jpg" ><input type="text" id="result" disabled/></span>
+    <span><img src="45.jpg" ><input type="text" id="result2" disabled/></span>
+    <span><img src="40.jpg" ><input type="text" id="result3" disabled/></span>
+    <span><img src="35.jpg" ><input type="text" id="result4" disabled/></span>
+    <span><img src="30.jpg" ><input type="text" id="result5" disabled/></span>
+    <span><img src="25.jpg" ><input type="text" id="result6" disabled/></span>
+    <span><img src="20.jpg" ><input type="text" id="result7" disabled/></span>
+    <span><img src="15.jpg" ><input type="text" id="result8" disabled/></span>
+    <span><img src="10.jpg" ><input type="text" id="result9" disabled/></span></div>
     
 </body>
 <script>
  
-   
-   
-
-function addComma(num) {
+    function addComma(num) {
      var regexp = /\B(?=(\d{3})+(?!\d))/g;
      return num.toString().replace(regexp, ',');
    }
@@ -68,9 +45,9 @@ function addComma(num) {
        var interest = addComma(Math.round(origin*(50/100)));
        
        if(val == ""){
-           document.getElementById('result1').value = "0";
+           document.getElementById('result').value = "0";
        }else{
-           document.getElementById('result1').value = interest;
+           document.getElementById('result').value = interest;
        }
        var origin = parseInt(val);
        var interest = addComma(Math.round(origin-origin*(45/100)));
@@ -145,27 +122,7 @@ function addComma(num) {
        }
    
    }
-
-
-   let numOne = '';
-let operator = '';
-let numTwo = '';
-const $result = document.querySelector('#origin');
-const onClickNumber = (number) => () => {
-  $result.value += number;  
-} 
-
-document.querySelector('#num-0').addEventListener('click', onClickNumber('0'));
-document.querySelector('#num-1').addEventListener('click', onClickNumber('1'));
-document.querySelector('#num-2').addEventListener('click', onClickNumber('2'));
-document.querySelector('#num-3').addEventListener('click', onClickNumber('3'));
-document.querySelector('#num-4').addEventListener('click', onClickNumber('4'));
-document.querySelector('#num-5').addEventListener('click', onClickNumber('5'));
-document.querySelector('#num-6').addEventListener('click', onClickNumber('6'));
-document.querySelector('#num-7').addEventListener('click', onClickNumber('7'));
-document.querySelector('#num-8').addEventListener('click', onClickNumber('8'));
-document.querySelector('#num-9').addEventListener('click', onClickNumber('9'));
-
-
+   
+   
    </script>
 </html>
