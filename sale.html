@@ -19,7 +19,7 @@ button { padding: 1em;  }
 </head>
 <body>
     <h2>할인 계산기<br>할인전 라벨의 정상가를 입력하세요.<br>계산전 참조용으로 사용하세요.</h2>
-    <div class="numbe">정상가 : <input type="number" name='userPhoneNumber' pattern='\d*' id="origin" onkeyup="calc(this.value)" onKeyup="this.value=this.value.replace(/[^0-9]/g,'');" autofocus/>
+    <div class="numbe">정상가 : <input type="text" id="read_input" name="read_input" name='userPhoneNumber' pattern='\d*' id="origin" onkeyup="calc(this.value)" onKeyup="this.value=this.value.replace(/[^0-9]/g,'');" autofocus/>
         <button onClick="window.location.reload()">새로고침</button></div>
     <div class="sale"><span><img src="50.jpg" ><input type="text" id="result" disabled/></span>
     <span><img src="45.jpg" ><input type="text" id="result2" disabled/></span>
