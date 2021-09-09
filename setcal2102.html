@@ -73,7 +73,7 @@
 <input type="number" name='userPhoneNumber' pattern='\d*' onKeyup="this.value=this.value.replace(/[^0-9]/g,'');" id="count2">
 <button onclick="ShowPrice()"   >계산</button>
 <div id="showResult"></div>
-<!--<div id="showResult1"></div>-->
+<div id="showResult1"></div>
 <p>소수점 제거 및 원단위 절삭으로<br>계산값과 실제 계산과 다소 차이가 있을 수 있으니<br> 참조용으로 사용 바랍니다.</p>
 <p>★세트 계산기의 사용에 따른 책임은 사용자에게 있습니다.★</p>
 <p>개선사항이나 문의사항은 shj7213@gmail.com 으로 메일 주십시오!</p>
@@ -113,15 +113,15 @@ function addComma(num) {
     var price = (resultPrice/(count*1)) //정상가 
     let ans = resultPrice;
         if(ans < 300000){
-            document.querySelector("#showResult1").innerHTML =("상품권 증정 대상이 아닙니다.");
+            document.querySelector("#showResult1").innerHTML =("전단내용 확인 바랍니다.");
     }else if(ans >= 300000 && ans < 500000){
-        document.querySelector("#showResult1").innerHTML =("3만원 상품권 증정 입니다. 상품권 제외상품 반드시 확인");
+        document.querySelector("#showResult1").innerHTML =("전단내용 확인 바랍니다.");
     }else if(ans >= 500000 && ans < 1000000){
-        document.querySelector("#showResult1").innerHTML =("5만원 상품권 증정 입니다. 상품권 제외상품 반드시 확인");
+        document.querySelector("#showResult1").innerHTML =("전단내용 확인 바랍니다.");
     }else if(ans >= 1000000 && ans < 10000000){
-        document.querySelector("#showResult1").innerHTML =("100만원당 13만원 상품권 증정 입니다. 상품권 제외상품 반드시 확인");
+        document.querySelector("#showResult1").innerHTML =("전단내용 확인 바랍니다.");
     }else if(ans >= 10000000){
-        document.querySelector("#showResult1").innerHTML =("150만원 상품권 증정 입니다. 상품권 제외상품 반드시 확인");      
+        document.querySelector("#showResult1").innerHTML =("전단내용 확인 바랍니다.");      
     }
      else{
         document.querySelector("#showResult1").innerHTML =("상품권 증정 대상이 아닙니다.");
