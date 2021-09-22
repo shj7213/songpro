@@ -14,13 +14,15 @@ input{ font-size: 1.5em; width: 80%; text-align: right;}
 div .sale {float: left;}
 div.numbe {display: inline; font-size: 1.5em; margin: 20px; width: 60%; font-weight: 900;}
 #origin {width: 30%; font-size: 2.0em;}
-button { padding: 1.2em; border-radius: 5px;}
+
 </style>
 </head>
 <body>
     <h2>할인 계산기<br>할인전 라벨의 정상가를 입력하세요.<br>계산전 참조용으로 사용하세요.</h2>
-    <div class="numbe">정상가 입력🔎<input type="text" name="read_input" pattern='\d*' id="origin" onkeyup="calc(this.value)" onKeyup="this.value=this.value.replace(/[^0-9]/g,'');" autofocus/>
-        <button onClick="window.location.reload()">새로고침</button></div>
+    <div class="numbe">정상가 입력🔎<input type="text" name="read_input" pattern='\d*' id="origin"  onKeyup="this.value=this.value.replace(/[^0-9]/g,'');" autofocus/></div>
+
+        
+        
     <div class="sale"><span><img src="50.jpg" ><input type="text" id="result" disabled/></span>
     <span><img src="45.jpg" ><input type="text" id="result2" disabled/></span>
     <span><img src="40.jpg" ><input type="text" id="result3" disabled/></span>
@@ -30,10 +32,42 @@ button { padding: 1.2em; border-radius: 5px;}
     <span><img src="20.jpg" ><input type="text" id="result7" disabled/></span>
     <span><img src="15.jpg" ><input type="text" id="result8" disabled/></span>
     <span><img src="10.jpg" ><input type="text" id="result9" disabled/></span></div>
+
+    <div>
+
+        <div class="buttonWrap">
+          <button onclick="addOutput(1)">1</button>
+          <button onclick="addOutput(2)">2</button>
+          <button onclick="addOutput(3)">3</button>
+          <button onclick="addOutput(4)">4</button>
+          <button onclick="addOutput(5)">5</button>
+        </div>
+        <div class="buttonWrap">
+          <button onclick="addOutput(6)">6</button>
+          <button onclick="addOutput(7)">7</button>
+          <button onclick="addOutput(8)">8</button>
+          <button onclick="addOutput(9)">9</button>
+          <button onclick="addOutput(0)">0</button>
+        </div>
+        <div class="buttonWrap">
+        <button  onClick="calc(document.getElementById('origin').value)">계산</button>
+        <button  onClick="window.location.reload()">새로고침</button>
+        </div>
+    </div>
+
+
+
+
     
 </body>
 <script>
- 
+
+    function addOutput(num) {
+    var display = document.getElementById("origin");
+    display.value = display.value + num;
+    }
+
+
     function addComma(num) {
      var regexp = /\B(?=(\d{3})+(?!\d))/g;
      return num.toString().replace(regexp, ',');
