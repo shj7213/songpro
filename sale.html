@@ -3,25 +3,24 @@
 <head>
 <meta charset="utf-8">
 <title>할인액 계산기</title>
-<script src="http://code.jquery.com/jquery-3.1.0.min.js"></script>
-
+    
 <style>
-    body{text-align: center; background-color: rgb(241, 190, 154);}
+    body{text-align: center; background-color: rgb(226, 209, 197);}
     span{display: inline-block; margin-bottom 10px;
 margin: auto; font-size: 1.5em; margin-top: 1.2em; height: 90px; width: 25%; border-width: 3px; font-weight: 900;}
-input{ font-size: 1.5em; width: 90%; text-align: right;}
+input{ font-size: 1.5em; width: 85%; text-align: right;}
 #id { font-style: italic;}
 img { width: 100px; height: 90px;}
-div .sale {float: left;}
 div.numbe {display: inline; font-size: 1.5em; margin: 20px; width: 60%; font-weight: 900;}
 #origin {width: 30%; font-size: 2.0em;}
 div .buttonWrap {margin: 3px; font-size: 3em;}
 div .buttonWrap button {margin: 3px; font-size: 3em; width: 4em; height: 4em; font-weight: bold; font-size: 0.5em; border-radius: 10%;}
 div .buttonWrap2 {margin: 3px; font-size: 3em;}
 div .buttonWrap2 button {margin: 3px; font-size: 3em; width: 9em; height: 4em; font-weight: bold; font-size: 0.5em; border-radius: 10%;}
-#bt1 {margin-top: 1em;}
+#bt1 {margin-bottom: 1em; margin-top: 1.5em;}
 </style>
 </head>
+
 <body>
     <h2>할인 계산기<br>할인전 라벨의 정상가를 입력 → 계산 버튼을 누르세요.<br>계산전 참조용으로 사용하세요.</h2>
     <div class="numbe">정상가 입력🔎<input type="text" name="read_input" pattern='\d*' id="origin"  onKeyup="this.value=this.value.replace(/[^0-9]/g,'');" autofocus/></div>
