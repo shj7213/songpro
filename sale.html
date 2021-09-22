@@ -14,7 +14,11 @@ input{ font-size: 1.5em; width: 80%; text-align: right;}
 div .sale {float: left;}
 div.numbe {display: inline; font-size: 1.5em; margin: 20px; width: 60%; font-weight: 900;}
 #origin {width: 30%; font-size: 2.0em;}
-
+div .buttonWrap {margin: 3px; font-size: 3em; border-radius: 1em;}
+div .buttonWrap button {margin: 3px; font-size: 3em; width: 4em; height: 4em; font-weight: bold; font-size: 0.5em;}
+div .buttonWrap2 {margin: 3px; font-size: 3em;}
+div .buttonWrap2 button {margin: 3px; font-size: 3em; width: 9em; height: 4em; font-weight: bold; font-size: 0.5em;}
+#bt1 {margin-top: 1em;}
 </style>
 </head>
 <body>
@@ -33,7 +37,7 @@ div.numbe {display: inline; font-size: 1.5em; margin: 20px; width: 60%; font-wei
     <span><img src="15.jpg" ><input type="text" id="result8" disabled/></span>
     <span><img src="10.jpg" ><input type="text" id="result9" disabled/></span></div>
 
-    <div>
+    <div id="bt1">
 
         <div class="buttonWrap">
           <button onclick="addOutput(1)">1</button>
@@ -49,8 +53,8 @@ div.numbe {display: inline; font-size: 1.5em; margin: 20px; width: 60%; font-wei
           <button onclick="addOutput(9)">9</button>
           <button onclick="addOutput(0)">0</button>
         </div>
-        <div class="buttonWrap">
-        <button  onClick="calc(document.getElementById('origin').value)">계산</button>
+        <div class="buttonWrap2" id="bt2">
+        <button onClick="calc(document.getElementById('origin').value)">계산</button>
         <button  onClick="window.location.reload()">새로고침</button>
         </div>
     </div>
