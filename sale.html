@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
+<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
 <title>할인액 계산기</title>
     
 <style>
@@ -26,22 +26,9 @@ div .buttonWrap2 button {margin: 3px; font-size: 3em; width: 9em; height: 4em; f
 
 <body>
     <h1> 😀SALE 계산기😀 <br></h1>
-    <h3>사용법 : ①라벨의 정상가 입력 👉 ②계산 버튼 <br> 매장의 고지된 할인율의 가격으로 계산됩니다.<br>계산전 참조용으로 사용하시고, 해당카드 및 쿠폰을 꼭 확인하세요.</h3>
+    <h3>사용법 : ①라벨의 정상가 입력 👉 ②계산 버튼 <br> 고지된 할인율의 가격으로 계산됩니다.<br>계산전 참조용으로 사용하시고, 해당카드 및 쿠폰을 꼭 준비하세요.</h3>
     <div><img src="asale.png" id="asale" ></div>
     <div class="numbe">정상가 입력🔎<input type="text" name="read_input" pattern='\d*' id="origin"  onKeyup="this.value=this.value.replace(/[^0-9]/g,'');" /></div>
-      
-        
-    <div class="sale">
-    <span><img src="50.jpg" ><input type="text" id="result" disabled/></span>
-    <span><img src="45.jpg" ><input type="text" id="result2" disabled/></span>
-    <span><img src="40.jpg" ><input type="text" id="result3" disabled/></span>
-    <span><img src="35.jpg" ><input type="text" id="result4" disabled/></span>
-    <span><img src="30.jpg" ><input type="text" id="result5" disabled/></span>
-    <span><img src="25.jpg" ><input type="text" id="result6" disabled/></span>
-    <span><img src="20.jpg" ><input type="text" id="result7" disabled/></span>
-    <span><img src="15.jpg" ><input type="text" id="result8" disabled/></span>
-    <span><img src="10.jpg" ><input type="text" id="result9" disabled/></span>
-    </div>
 
     <div id="bt1">
 
@@ -65,7 +52,21 @@ div .buttonWrap2 button {margin: 3px; font-size: 3em; width: 9em; height: 4em; f
         </div>
     </div>
 
+  
+        
+    <div class="sale">
+    <span><img src="50.jpg" ><input type="text" id="result" disabled/></span>
+    <span><img src="45.jpg" ><input type="text" id="result2" disabled/></span>
+    <span><img src="40.jpg" ><input type="text" id="result3" disabled/></span>
+    <span><img src="35.jpg" ><input type="text" id="result4" disabled/></span>
+    <span><img src="30.jpg" ><input type="text" id="result5" disabled/></span>
+    <span><img src="25.jpg" ><input type="text" id="result6" disabled/></span>
+    <span><img src="20.jpg" ><input type="text" id="result7" disabled/></span>
+    <span><img src="15.jpg" ><input type="text" id="result8" disabled/></span>
+    <span><img src="10.jpg" ><input type="text" id="result9" disabled/></span>
+    </div>
 
+    
 
 
     
