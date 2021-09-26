@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>할인액 계산기</title>
+    
+<style>
+    body{text-align: center; background-color: rgb(226, 209, 197);}
+    span{display: inline-block; margin-bottom 10px;
+margin: auto; font-size: 1.5em; margin-top: 1.2em; height: 90px; width: 25%; border-width: 3px; font-weight: 900;}
+input{ font-size: 1.5em; width: 85%; text-align: right;}
+#id { font-style: italic;}
+img { width: 100px; height: 90px;}
+div.numbe {display: inline; font-size: 1.5em; margin: 20px; width: 60%; font-weight: 900;}
+#origin {width: 30%; font-size: 2.0em;}
+div .buttonWrap {margin: 3px; font-size: 3em;}
+div .buttonWrap button {margin: 3px; font-size: 3em; width: 4em; height: 4em; font-weight: bold; font-size: 0.5em; border-radius: 10%;}
+div .buttonWrap2 {margin: 3px; font-size: 3em;}
+div .buttonWrap2 button {margin: 3px; font-size: 3em; width: 9em; height: 4em; font-weight: bold; font-size: 0.5em; border-radius: 10%;}
+#bt1 {margin-bottom: 1em; margin-top: 1.5em;}
+#asale { width: 10em; height: auto;}
+</style>
+</head>
+
+<body>
+    <h1>할인 계산기<br></h1>
+    <h3>①라벨의 정상가 입력 → ②계산 버튼 <br> 매장의 고지된 할인율의 가격으로 계산됩니다.<br>계산전 참조용으로 사용하세요.</h3>
+    <div><img src="asale.png" id="asale" ></div>
+    <div class="numbe"></div>정상가 입력🔎<input type="text" name="read_input" pattern='\d*' id="origin"  onKeyup="this.value=this.value.replace(/[^0-9]/g,'');" /></div>
+      
+        
+    <div class="sale">
+    <span><img src="50.jpg" ><input type="text" id="result" disabled/></span>
+    <span><img src="45.jpg" ><input type="text" id="result2" disabled/></span>
+    <span><img src="40.jpg" ><input type="text" id="result3" disabled/></span>
+    <span><img src="35.jpg" ><input type="text" id="result4" disabled/></span>
+    <span><img src="30.jpg" ><input type="text" id="result5" disabled/></span>
+    <span><img src="25.jpg" ><input type="text" id="result6" disabled/></span>
+    <span><img src="20.jpg" ><input type="text" id="result7" disabled/></span>
+    <span><img src="15.jpg" ><input type="text" id="result8" disabled/></span>
+    <span><img src="10.jpg" ><input type="text" id="result9" disabled/></span>
+    </div>
+
+    <div id="bt1">
+
+        <div class="buttonWrap">
+          <button onclick="addOutput(1)">1</button>
+          <button onclick="addOutput(2)">2</button>
+          <button onclick="addOutput(3)">3</button>
+          <button onclick="addOutput(4)">4</button>
+          <button onclick="addOutput(5)">5</button>
+        </div>
+        <div class="buttonWrap">
+          <button onclick="addOutput(6)">6</button>
+          <button onclick="addOutput(7)">7</button>
+          <button onclick="addOutput(8)">8</button>
+          <button onclick="addOutput(9)">9</button>
+          <button onclick="addOutput(0)">0</button>
+        </div>
+        <div class="buttonWrap2" id="bt2">
+        <button onClick="calc(document.getElementById('origin').value)">계산</button>
+        <button  onClick="window.location.reload()">새로고침</button>
+        </div>
+    </div>
+
+
+
+
+    
+</body>
+<script>
+
+    function addOutput(num) {
+    var display = document.getElementById("origin");
+    display.value = display.value + num;
+    }
+
+
+    function addComma(num) {
+     var regexp = /\B(?=(\d{3})+(?!\d))/g;
+     return num.toString().replace(regexp, ',');
+   }
+    
+   
+   function calc(val){
+       var origin = parseInt(val);
+       var interest = addComma(Math.round(origin*(50/100)));
+       
+       if(val == ""){
+           document.getElementById('result').value = "0";
+       }else{
+           document.getElementById('result').value = interest;
+       }
+       var origin = parseInt(val);
+       var interest = addComma(Math.round(origin-origin*(45/100)));
+       
+       if(val == ""){
+           document.getElementById('result2').value = "0";
+       }else{
+           document.getElementById('result2').value = interest;
+       }
+   
+       var origin = parseInt(val);
+       var interest = addComma(Math.round(origin-origin*(40/100)));
+       
+       if(val == ""){
+           document.getElementById('result3').value = "0";
+       }else{
+           document.getElementById('result3').value = interest;
+       }
+       var origin = parseInt(val);
+       var interest = addComma(Math.round(origin-origin*(35/100)));
+       
+       if(val == ""){
+           document.getElementById('result4').value = "0";
+       }else{
+           document.getElementById('result4').value = interest;
+       }
+   
+       var origin = parseInt(val);
+       var interest = addComma(Math.round(origin-origin*(30/100)));
+       
+       if(val == ""){
+           document.getElementById('result5').value = "0";
+       }else{
+           document.getElementById('result5').value = interest;
+       }
+   
+       var origin = parseInt(val);
+       var interest = addComma(Math.round(origin-origin*(25/100)));
+       
+       if(val == ""){
+           document.getElementById('result6').value = "0";
+       }else{
+           document.getElementById('result6').value = interest;
+       }
+   
+       var origin = parseInt(val);
+       var interest = addComma(Math.round(origin-origin*(20/100)));
+       
+       if(val == ""){
+           document.getElementById('result7').value = "0";
+       }else{
+           document.getElementById('result7').value = interest;
+       }
+       
+       var origin = parseInt(val);
+       var interest = addComma(Math.round(origin-origin*(15/100)));
+       
+       if(val == ""){
+           document.getElementById('result8').value = "0";
+       }else{
+           document.getElementById('result8').value = interest;
+       }
+   
+   
+       var origin = parseInt(val);
+       var interest = addComma(Math.round(origin-origin*(10/100)));
+       
+       if(val == ""){
+           document.getElementById('result9').value = "0";
+       }else{
+           document.getElementById('result9').value = interest;
+       }
+   
+   }
+   
+   
+   </script>
+</html>
