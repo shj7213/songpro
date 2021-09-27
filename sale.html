@@ -169,6 +169,20 @@ div .buttonWrap2 button {margin: 3px; font-size: 3em; width: 9em; height: 4em; f
    
    }
    
+    document.documentElement.addEventListener('touchstart', function (event) {
+     if (event.touches.length > 1) {
+          event.preventDefault(); 
+        } 
+    }, false);
+
+var lastTouchEnd = 0; 
+
+document.documentElement.addEventListener('touchend', function (event) {
+     var now = (new Date()).getTime();
+     if (now - lastTouchEnd <= 300) {
+          event.preventDefault(); 
+        } lastTouchEnd = now; 
+    }, false);
    
    </script>
 </html>
