@@ -6,22 +6,23 @@
     
 <style>
     body{text-align: center; background-color: rgb(226, 209, 197);}
-    span{display: inline-block; margin-bottom 10px;
+    span{display: inline-block; margin-bottom 5px;
 margin: auto; font-size: 1.5em; margin-top: 1.2em; height: 90px; width: 25%; border-width: 3px; font-weight: 900;}
-input{ font-size: 1.5em; width: 80%; text-align: right; border-radius:15px;}
+input{ font-size: 4rem; width: 80%; text-align: right; border-radius:15px;}
 #id { font-style: italic;}
 img { width: 100px; height: 90px;}
 div.numbe {display: inline; font-size: 2em; margin: 20px; width: 60%; font-weight: 900;}
 #origin {width: 30%; font-size: 1.5em;}
-div .buttonWrap {margin: 3px; font-size: 3em;}
-div .buttonWrap button {margin: 3px; font-size: 3em; width: 4em; height: 4em; font-weight: bold; font-size: 0.5em; border-radius: 10%;}
+div .buttonWrap {margin: 2px; font-size: 4em;}
+div .buttonWrap button {margin: 1px; font-size: 4em; width: 7em; height: 4em; font-weight: bold; font-size: 0.5em; border-radius: 40%; padding: 0%;}
 div .buttonWrap2 {margin: 3px; font-size: 3em;}
 div .buttonWrap2 button {margin: 3px; font-size: 3em; width: 9em; height: 4em; font-weight: bold; font-size: 0.5em; border-radius: 10%;}
 #bt1 {margin-bottom: 1em; margin-top: 1.5em; }
 #asale { width: 200px; height: 150px; border-radius: 20%;}
 .buttonWrap > button { background-color: rgb(235, 228, 132);}
-.buttonWrap2 > button { background-color: rgb(204, 150, 125);}
-span > h2 {font-weight: 900; color: blue; border: 1px solid; border-radius: 15px;}
+#call1 { background-color: rgb(204, 150, 125);}
+#reset1 { background-color: rgb(204, 150, 125);}
+span > h2 {font-weight: 900; color: rgb(225, 225, 235); border: 1px solid; border-radius: 15px; width: 80%; display: inline-block; font-size: 2em; background-color: black;}
 </style>
 </head>
 
@@ -37,34 +38,36 @@ span > h2 {font-weight: 900; color: blue; border: 1px solid; border-radius: 15px
           <button onclick="addOutput(1)">1</button>
           <button onclick="addOutput(2)">2</button>
           <button onclick="addOutput(3)">3</button>
-          <button onclick="addOutput(4)">4</button>
-          <button onclick="addOutput(5)">5</button>
-        </div>
+         </div>  
         <div class="buttonWrap">
+            <button onclick="addOutput(4)">4</button>
+            <button onclick="addOutput(5)">5</button>         
           <button onclick="addOutput(6)">6</button>
+        </div>
+          <div class="buttonWrap">
           <button onclick="addOutput(7)">7</button>
           <button onclick="addOutput(8)">8</button>
           <button onclick="addOutput(9)">9</button>
-          <button onclick="addOutput(0)">0</button>
-        </div>
-        <div class="buttonWrap2" id="bt2">
-        <button onClick="calc(document.getElementById('origin').value)">계산</button>
-        <button  onClick="window.location.reload()">새로고침</button>
+        </div>  
+        <div class="buttonWrap"> 
+            <button onClick="calc(document.getElementById('origin').value)" id="call1">계산</button>
+            <button onclick="addOutput(0)">0</button>
+            <button onClick="window.location.reload()" id="reset1">초기화</button>
         </div>
     </div>
 
   
         
     <div class="sale">
-    <span><h2>50% 할인</h2><input type="text" id="result" disabled/></span>
-    <span><h2>45% 할인</h2><input type="text" id="result2" disabled/></span>
-    <span><h2>40% 할인</h2><input type="text" id="result3" disabled/></span>
-    <span><h2>35% 할인</h2><input type="text" id="result4" disabled/></span>
-    <span><h2>30% 할인</h2><input type="text" id="result5" disabled/></span>
-    <span><h2>25% 할인</h2><input type="text" id="result6" disabled/></span>
-    <span><h2>20% 할인</h2><input type="text" id="result7" disabled/></span>
-    <span><h2>15% 할인</h2><input type="text" id="result8" disabled/></span>
-    <span><h2>10% 할인</h2><input type="text" id="result9" disabled/></span>
+    <span><h2>50%할인</h2><input type="text" id="result" disabled/></span>
+    <span><h2>45%할인</h2><input type="text" id="result2" disabled/></span>
+    <span><h2>40%할인</h2><input type="text" id="result3" disabled/></span>
+    <span><h2>35%할인</h2><input type="text" id="result4" disabled/></span>
+    <span><h2>30%할인</h2><input type="text" id="result5" disabled/></span>
+    <span><h2>25%할인</h2><input type="text" id="result6" disabled/></span>
+    <span><h2>20%할인</h2><input type="text" id="result7" disabled/></span>
+    <span><h2>15%할인</h2><input type="text" id="result8" disabled/></span>
+    <span><h2>10%할인</h2><input type="text" id="result9" disabled/></span>
     </div>
 
     
