@@ -38,21 +38,19 @@ span > h2 {font-weight: 900; color: rgb(225, 225, 235); border: 1px solid; borde
           <button onclick="addOutput(1)">1</button>
           <button onclick="addOutput(2)">2</button>
           <button onclick="addOutput(3)">3</button>
-         </div>  
-        <div class="buttonWrap">
-            <button onclick="addOutput(4)">4</button>
-            <button onclick="addOutput(5)">5</button>         
-          <button onclick="addOutput(6)">6</button>
+          <button onclick="addOutput(4)">4</button>
+          <button onclick="addOutput(5)">5</button>
         </div>
-          <div class="buttonWrap">
+        <div class="buttonWrap">
+          <button onclick="addOutput(6)">6</button>
           <button onclick="addOutput(7)">7</button>
           <button onclick="addOutput(8)">8</button>
           <button onclick="addOutput(9)">9</button>
-        </div>  
-        <div class="buttonWrap"> 
-            <button onClick="calc(document.getElementById('origin').value)" id="call1">계산</button>
-            <button onclick="addOutput(0)">0</button>
-            <button onClick="window.location.reload()" id="reset1">초기화</button>
+          <button onclick="addOutput(0)">0</button>
+        </div>
+        <div class="buttonWrap2" id="bt2">
+        <button id="call1" onClick="calc(document.getElementById('origin').value)">계산</button>
+        <button id="reset1" onClick="window.location.reload()">새로고침</button>
         </div>
     </div>
 
